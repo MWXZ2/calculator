@@ -221,18 +221,16 @@
             font-size: 24px;
         }
 
+        /* FIX: Using CSS variables to ensure copyright is visible in both themes */
         .copyright {
             text-align: center;
             padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.7);
+            border-top: 1px solid var(--btn-operator-bg);
+            color: var(--text-secondary);
             font-size: 0.9rem;
+            transition: all 0.3s ease;
         }
         
-        [data-theme="light"] .copyright {
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
-            color: rgba(0, 0, 0, 0.7);
-        }
         /* Animation for button press */
         @keyframes buttonPress {
             0% { transform: scale(1); }
@@ -845,6 +843,10 @@
         <span class="material-icons">dark_mode</span>
     </div>
 
+     <div class="copyright">
+        <p>&copy; 2025 Mohammed Ibrahim. All rights reserved.</p>
+    </div>
+    
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // DOM Elements
@@ -2189,11 +2191,5 @@
             updateProgDisplay();
         });
     </script>
-    
-     <div class="copyright">
-                <p>&copy; 2025 Mohammed Ibrahim. All rights reserved.</p>
-            </div>
 </body>
 </html>
-
-
